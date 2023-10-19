@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 8326066555538447344}
   - component: {fileID: 8326066555538447345}
   - component: {fileID: -392331013711540861}
+  - component: {fileID: 5741307477053833050}
+  - component: {fileID: 1958938923753932749}
   m_Layer: 0
   m_Name: Pick
-  m_TagString: Untagged
+  m_TagString: Pick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,3 +143,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!70 &5741307477053833050
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326066555538447347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 19.205772, y: 30.21}
+  m_Direction: 0
+--- !u!114 &1958938923753932749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326066555538447347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7fe0a82d3f4f94e8e5e62e3ab0b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  img: {fileID: 8454488437220929518, guid: 97ac7342b634e9445adcb8e55eed32c5, type: 3}

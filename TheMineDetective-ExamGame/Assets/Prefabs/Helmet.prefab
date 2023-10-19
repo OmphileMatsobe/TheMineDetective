@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4144318404934283311}
   - component: {fileID: 4144318404934283308}
   - component: {fileID: -6352928493261755647}
+  - component: {fileID: 7264384898152756326}
+  - component: {fileID: 2867364214047060075}
   m_Layer: 0
   m_Name: Helmet
-  m_TagString: Untagged
+  m_TagString: Helmet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,3 +143,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!70 &7264384898152756326
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144318404934283310}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6.340001, y: 5.49}
+  m_Direction: 0
+--- !u!114 &2867364214047060075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144318404934283310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7fe0a82d3f4f94e8e5e62e3ab0b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  img: {fileID: 8454488437220929518, guid: dc420933ced9769418ddfcda3b41a91e, type: 3}
