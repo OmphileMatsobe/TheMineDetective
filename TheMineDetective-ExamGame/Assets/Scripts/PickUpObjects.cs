@@ -10,17 +10,22 @@ public class PickUpObjects : MonoBehaviour, IPointerClickHandler
     private TestInventory testInventory;
 
     [SerializeField]
-    private Items_SO item;
+    public Items_SO item;
 
     public void OnPointerClick(PointerEventData eventData)
     {
         // throw new NotImplementedException();
 
-        Debug.Log(item.name);
+      if (item.InteractableSO == true)
+        {
+            Debug.Log(item.name);
 
-        testInventory.inventory_SO.ItemsInInventory.Add(item);
+            testInventory.inventory_SO.ItemsInInventory.Add(item);
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        
+       
 
     }
 

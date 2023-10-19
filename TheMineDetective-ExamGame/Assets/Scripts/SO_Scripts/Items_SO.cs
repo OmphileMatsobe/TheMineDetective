@@ -9,6 +9,9 @@ public class Items_SO :ScriptableObject
     [SerializeField]
     private Items item;
 
+    [SerializeField]
+    public bool InteractableSO = false;
+
     public enum Items
     {
         KeyDesk,
