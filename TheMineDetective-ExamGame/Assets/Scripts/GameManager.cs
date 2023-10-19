@@ -56,9 +56,8 @@ public class GameManager : MonoBehaviour
     public void onClickPick()
     {
         if (prop != "Player")
-        {
             Destroy(GameObject.FindWithTag(prop).GetComponent<PlayerMovement>());
-        }
+
     }
 
     // Update is called once per frame
