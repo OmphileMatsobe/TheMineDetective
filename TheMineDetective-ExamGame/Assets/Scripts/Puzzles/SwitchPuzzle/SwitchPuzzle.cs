@@ -9,24 +9,27 @@ public class SwitchPuzzle : MonoBehaviour
     bool allDown, allUp, switchSet;
     public int firstGo = 0;
     int flag = 1;
+    int switchComb;
+    Switches switches;
+
     enum state
     {
         one = 1,
         two = 2,
         three = 3,
         four = 4,
+        five = 5,
 
     }
     void Start()
     {
-        calibarate();
-        allUp = allDown = switchSet = false;   
+        calibarate();   
     }
 
     void calibarate()
     {
-        firstGo = Random.Range(1, 4);
     }
+
 
     // Update is called once per frame
     void Update()

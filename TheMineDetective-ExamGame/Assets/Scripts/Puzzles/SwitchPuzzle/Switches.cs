@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Switches : MonoBehaviour
 {
-    public float switchId;
+    public string switchId;
 }

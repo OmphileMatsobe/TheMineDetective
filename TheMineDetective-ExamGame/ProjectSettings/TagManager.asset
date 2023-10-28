@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Switch
   - CameraManager
+  - Pick
+  - Helmet
+  - Gloves
+  - OnSwitch
+  - OffSwitch
   layers:
   - Default
   - TransparentFX
