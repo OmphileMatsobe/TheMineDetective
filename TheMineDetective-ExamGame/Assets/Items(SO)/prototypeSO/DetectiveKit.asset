@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DetectiveKit
   m_EditorClassIdentifier: 
   item: 4
+  InteractableSO: 1

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Flashlight
   m_EditorClassIdentifier: 
   item: 3
+  InteractableSO: 1

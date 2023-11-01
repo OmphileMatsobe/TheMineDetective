@@ -7,12 +7,11 @@ public class TestInventory : MonoBehaviour
     [SerializeField]
     public Inventory_SO inventory_SO;
 
-    [SerializeField]
-    private List<ScriptableObject> inventory_pl;
+   
 
     private void Update()
     {
-        inventory_pl = inventory_SO.ItemsInInventory;
+        
     }
 
     private void Start()

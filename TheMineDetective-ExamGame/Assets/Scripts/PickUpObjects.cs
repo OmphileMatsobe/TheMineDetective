@@ -34,6 +34,8 @@ public class PickUpObjects : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         testInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<TestInventory>();
+
+
     }
 
     // Update is called once per frame

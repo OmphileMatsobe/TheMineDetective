@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Notebook
   m_EditorClassIdentifier: 
   item: 1
+  InteractableSO: 0

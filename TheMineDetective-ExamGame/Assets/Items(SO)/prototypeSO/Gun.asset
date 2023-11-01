@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Gun
   m_EditorClassIdentifier: 
   item: 2
+  InteractableSO: 1

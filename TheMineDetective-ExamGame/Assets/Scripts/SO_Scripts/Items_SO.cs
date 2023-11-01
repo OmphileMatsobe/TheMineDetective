@@ -7,10 +7,10 @@ using System;
 public class Items_SO :ScriptableObject
 {
     [SerializeField]
-    private Items item;
+    public Items item;
 
     [SerializeField]
-    public bool InteractableSO = false;
+    public bool InteractableSO = true;
 
     public enum Items
     {

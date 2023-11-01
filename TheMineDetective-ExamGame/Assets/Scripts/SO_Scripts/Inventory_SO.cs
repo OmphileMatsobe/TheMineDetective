@@ -10,5 +10,5 @@ using System;
 public class Inventory_SO : ScriptableObject
 {
     [SerializeField]
-    public List<ScriptableObject> ItemsInInventory;
+    public List<Items_SO> ItemsInInventory;
 }

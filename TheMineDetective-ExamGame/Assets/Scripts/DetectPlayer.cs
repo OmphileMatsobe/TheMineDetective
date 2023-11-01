@@ -18,7 +18,15 @@ public class DetectPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Slaap");
+        foreach (GameObject objects in InteractableObjects)
+        {
+            if (objects.GetComponent<PickUpObjects>() == true)
+            {
+                objects.GetComponent<PickUpObjects>().item.InteractableSO = false;
+            }
+        }
+
+            
     }
 
     // Update is called once per frame
