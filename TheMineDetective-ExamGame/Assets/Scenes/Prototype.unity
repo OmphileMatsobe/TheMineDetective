@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63352026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.81, y: -3.3465424, z: 0}
+  m_LocalPosition: {x: -5.57, y: -3.2, z: 0}
   m_LocalScale: {x: 1.6058301, y: 2.9131608, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -453,6 +453,9 @@ MonoBehaviour:
   movespeed: 5
   rb: {fileID: 63352031}
   facingRight: 0
+  minClamp: -7.5
+  maxClamp: 6
+  PosX: 0
 --- !u!1 &90886573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,7 +5733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151017408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.983, y: -1.3702, z: 10.139941}
+  m_LocalPosition: {x: 1.07, y: -1.18, z: 10.139941}
   m_LocalScale: {x: 2.7318, y: 0.7192, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10242,6 +10245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5535434296079454653, guid: 628657bfb6c237a43a3922e763a52327, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5535434296079454653, guid: 628657bfb6c237a43a3922e763a52327, type: 3}
       propertyPath: Normalitem
       value: 

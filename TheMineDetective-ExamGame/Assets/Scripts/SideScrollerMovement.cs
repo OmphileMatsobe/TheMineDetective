@@ -16,7 +16,8 @@ public class SideScrollerMovement : MonoBehaviour
 
     private float movedirection;
 
- 
+    [SerializeField]
+    private float minClamp, maxClamp, PosX;
 
     
     Vector2 Pos;
@@ -36,6 +37,11 @@ public class SideScrollerMovement : MonoBehaviour
         
         movedirection = Input.GetAxis("Horizontal");
 
+
+        
+
+        float TestValue = Mathf.Clamp(transform.position.x, minClamp, maxClamp);
+
         if (movedirection > 0 && !facingRight)
         {
             flipCharacter();
@@ -47,7 +53,15 @@ public class SideScrollerMovement : MonoBehaviour
         }
 
        
-        rb.velocity = new Vector2(movedirection * movespeed, rb.velocity.y);
+        rb.velocity = new Vector2(movedirection*movespeed, rb.velocity.y);
+        
+       
+
+       if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log(TestValue);
+        }
+        
      
     }
 
