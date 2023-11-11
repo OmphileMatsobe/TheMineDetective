@@ -22,6 +22,11 @@ public class Items_SO :ScriptableObject
         Notebook,
         Gun,
         Flashlight,
-        DetectiveKit
+        DetectiveKit,
+        MugEmpty,
+        Laxatives,
+        Fuse,
+        MugFull
+        
     }
 }

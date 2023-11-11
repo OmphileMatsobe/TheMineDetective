@@ -45,11 +45,6 @@ public class CheckCode : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            CheckCod();
-            
-        }
     }
 
     private void CheckCod()

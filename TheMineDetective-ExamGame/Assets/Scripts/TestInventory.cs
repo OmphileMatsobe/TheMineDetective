@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestInventory : MonoBehaviour
 {
@@ -16,12 +17,9 @@ public class TestInventory : MonoBehaviour
 
     private void Start()
     {
-        int Count = inventory_SO.ItemsInInventory.Count;
-
-
-        for (int i =  0; i < Count; i++)
+        if (SceneManager.GetActiveScene().name == "Prototype")
         {
-            inventory_SO.ItemsInInventory.Remove(inventory_SO.ItemsInInventory[0]);
+            inventory_SO.ItemsInInventory.Clear();
         }
         
     }

@@ -57,10 +57,7 @@ public class SideScrollerMovement : MonoBehaviour
         
        
 
-       if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(TestValue);
-        }
+       
         
      
     }
