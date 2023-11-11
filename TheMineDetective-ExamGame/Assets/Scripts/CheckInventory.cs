@@ -20,24 +20,35 @@ public class CheckInventory : MonoBehaviour, IPointerClickHandler
 
     [SerializeField]
     Items_SO RemoveItem;
-    
+
+    [SerializeField]
+    private bool unlocked = false;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
-        // throw new System.NotImplementedException();
-       foreach (Items_SO inventory in testInventory.inventory_SO.ItemsInInventory)
+        if (unlocked == false)
         {
-            if(inventory.item == ItemNeeded)
+            foreach (Items_SO inventory in testInventory.inventory_SO.ItemsInInventory)
             {
-                RemoveItem = inventory;
-                cameraManager.ActiveCamera = SetCamera;
-                cameraManager.ChangeCamera();
-               
+                if (inventory.item == ItemNeeded)
+                {
+                    RemoveItem = inventory;
+                    cameraManager.ActiveCamera = SetCamera;
+                    cameraManager.ChangeCamera();
+                    unlocked = true;
+                }
             }
+
+            testInventory.inventory_SO.ItemsInInventory.Remove(RemoveItem);
         }
 
-        testInventory.inventory_SO.ItemsInInventory.Remove(RemoveItem);
+        else
+        {
+            cameraManager.ActiveCamera = SetCamera;
+            cameraManager.ChangeCamera();
+        }
+      
+       
     }
 
 
@@ -50,9 +61,5 @@ public class CheckInventory : MonoBehaviour, IPointerClickHandler
         cameraManager = GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
