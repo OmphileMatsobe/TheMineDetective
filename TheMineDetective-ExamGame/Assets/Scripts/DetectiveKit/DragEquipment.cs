@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragMagnifyingGlass : MonoBehaviour
+public class DragEquipment : MonoBehaviour
 {
 
     private Vector2 Mousepos;
