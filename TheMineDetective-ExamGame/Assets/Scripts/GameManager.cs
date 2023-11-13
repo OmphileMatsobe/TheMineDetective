@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     Button moveTo, pickUp, takePic, note, putInBag;
-
     [SerializeField]
     Image setImage;
-
     [SerializeField]
     GameObject display;
+
+    GameObject mine, puzzle;
     string prop;
 
     PlayerMovement playerMovement;
@@ -59,6 +59,15 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.FindWithTag(prop).GetComponent<PlayerMovement>());
 
     }
+
+    public void activatePuzzle()
+    {
+        mine = GameObject.FindWithTag("Mine");
+        puzzle = GameObject.FindWithTag("Puzzle");
+        puzzle.SetActive(true);
+        mine.SetActive(false);
+    }
+
 
     // Update is called once per frame
     void Update()
