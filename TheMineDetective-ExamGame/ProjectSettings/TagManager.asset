@@ -11,6 +11,10 @@ TagManager:
   - Gloves
   - OnSwitch
   - OffSwitch
+  - HintManager
+  - Equipment
+  - Imposter
+  - DustBox
   layers:
   - Default
   - TransparentFX
@@ -56,4 +60,16 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1280413399
+    locked: 0
+  - name: Equipment
+    uniqueID: 4209579633
+    locked: 0
+  - name: UVLight
+    uniqueID: 3334759955
+    locked: 0
+  - name: MG
+    uniqueID: 3392709805
+    locked: 0
+  - name: Dust
+    uniqueID: 1951314195
     locked: 0
