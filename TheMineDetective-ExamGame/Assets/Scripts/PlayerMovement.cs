@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     GameManager gameManager;
-    Vector2 move;
+    [SerializeField]
+    float speed;
+    Vector2 move, moveOnPress;
+    float ver, hor;
     string tagCheck;
     bool setMove = false;
 
@@ -16,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         move = transform.position;
         tagCheck = gameObject.tag;
+        moveOnPress = transform.position;
     }
 
     public void activateMove(string obj)
@@ -28,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         transform.position = move;
+
+        hor = Input.GetAxis("Horizontal");
+
+        moveOnPress.x += hor * Time.deltaTime * speed; 
+
+        transform.position = moveOnPress;
     }
 
     private void FixedUpdate()
