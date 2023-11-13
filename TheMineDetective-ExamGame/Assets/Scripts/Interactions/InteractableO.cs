@@ -19,9 +19,9 @@ public class InteractableO : MonoBehaviour, IPointerClickHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-      
 
 
+       
 
         if (InteractableObj == true)
         {

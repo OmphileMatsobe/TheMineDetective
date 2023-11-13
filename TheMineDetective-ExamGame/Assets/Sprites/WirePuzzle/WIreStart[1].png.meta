@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a34139cc56a2e6419f49a2d492ff839
+guid: 23eb4bf42f0f3db48992c74d18d735f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,11 +44,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.5354056, y: 0.50147754}
+  spritePivot: {x: 0.44713408, y: 0.50377035}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 975, y: 510, z: 934, w: 497}
+  spriteBorder: {x: 791, y: 512, z: 993, w: 500}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -117,7 +117,7 @@ TextureImporter:
     nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
