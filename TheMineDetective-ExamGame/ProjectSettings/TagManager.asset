@@ -21,6 +21,7 @@ TagManager:
   - DetectImposter
   - SwitchPuzzel
   - SwitchHandle
+  - Inventory
   layers:
   - Default
   - TransparentFX

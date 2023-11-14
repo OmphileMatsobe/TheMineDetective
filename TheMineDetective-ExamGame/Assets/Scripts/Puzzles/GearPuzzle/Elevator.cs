@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
+    [SerializeField]
+    GameObject cnMach, Mine, game;
+    [SerializeField]
+    GameManager gameManager;
 
     private void OnMouseDown()
     {
-        Debug.Log("Hello");
+        cnMach.SetActive(false);
+        Mine.SetActive(false);
+        game.GetComponent<GameManager>().enabled = false;
+        
     }
 }
