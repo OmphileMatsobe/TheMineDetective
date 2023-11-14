@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class MinerNPC : MonoBehaviour, IPointerClickHandler
 {
@@ -27,6 +28,8 @@ public class MinerNPC : MonoBehaviour, IPointerClickHandler
             checkWires.Completed == true)
         {
             //dialogue if imposter is away and wires are done
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
