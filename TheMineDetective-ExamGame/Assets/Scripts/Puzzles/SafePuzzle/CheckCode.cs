@@ -54,14 +54,14 @@ public class CheckCode : MonoBehaviour
         {
             if (Password[i] != TypedPassword[i])
             {
-                Debug.Log("wrong");
+               
                 CorrectCode = false;
                 return;
             }
 
             else
             {
-                Debug.Log("correct");
+              
                 CorrectCode = true;
             }
            

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-
+    [SerializeField]
     Vector3 startPoint, startPos, newPos;
 
 
@@ -23,13 +23,15 @@ public class Wire : MonoBehaviour
     {
         startPoint = transform.parent.position;
         startPos = transform.position;
+        checkWires = GameObject.FindGameObjectWithTag("WireManager").GetComponent<CheckWires>();
 
     }
 
     public void OnMouseDrag()
     {
         newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        newPos.z = -10;
+       
+        newPos.z = 0;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(newPos, .2f);
 

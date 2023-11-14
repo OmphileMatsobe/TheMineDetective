@@ -22,7 +22,7 @@ public class Door : MonoBehaviour, IPointerClickHandler
         {
             Player.transform.position = ExitPosition.transform.position;
            
-                        Debug.Log("move");
+                       
         }
     }
 

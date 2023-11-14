@@ -8,7 +8,9 @@ public class CheckWires : MonoBehaviour
     [SerializeField]
     private int SwitchCount;
     private int OnCount = 0;
-    
+
+    [SerializeField]
+    public bool Completed = false;
     
     public void ChangeCount(int points)
     {
@@ -16,7 +18,7 @@ public class CheckWires : MonoBehaviour
 
         if (OnCount == SwitchCount)
         {
-            Debug.Log("Success");
+            Completed = true;
         }
     }
 }

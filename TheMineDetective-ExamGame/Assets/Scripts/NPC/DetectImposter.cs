@@ -6,14 +6,14 @@ public class DetectImposter : MonoBehaviour
 {
 
     [SerializeField]
-    private bool INTIMADATION;
+    public bool INTIMADATION;
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Imposter"))
         {
-            Debug.Log("Silence");
+           
             INTIMADATION = true;
         }
     }
@@ -23,7 +23,7 @@ public class DetectImposter : MonoBehaviour
     {
         if (collision.CompareTag("Imposter"))
         {
-            Debug.Log("CanSpeak");
+            
             INTIMADATION = false;
         }
     }

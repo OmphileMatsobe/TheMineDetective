@@ -23,6 +23,12 @@ public class ExchangeItems : MonoBehaviour,IPointerClickHandler
     [SerializeField]
     private int checkamount = 0;
 
+    [SerializeField]
+    private GameObject fullmug;
+
+    [SerializeField]
+    private Transform placement;
+
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log(RequiredItems.Count);
@@ -81,9 +87,8 @@ public class ExchangeItems : MonoBehaviour,IPointerClickHandler
         if (AllItems == true)
         {
 
-            testInventory.inventory_SO.ItemsInInventory.Add(ReceivedItem);
 
-            
+            Instantiate(fullmug, placement);
 
 
             for (int i = 0; i < RemoveItems.Count; i++)
