@@ -20,6 +20,7 @@ TagManager:
   - DetectImposter
   - Imposter
   - SwitchPuzzel
+  - GearPuzzle
   layers:
   - Default
   - TransparentFX
@@ -65,4 +66,7 @@ TagManager:
     locked: 0
   - name: character
     uniqueID: 2461374847
+    locked: 0
+  - name: MG
+    uniqueID: 2518502589
     locked: 0

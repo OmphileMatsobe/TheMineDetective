@@ -14,25 +14,33 @@ public class OpenInventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             displayInventory();
+            Debug.Log("Fok");
         }
     }
 
     private void displayInventory()
     {
-        if (inventory.activeSelf == true)
+        Debug.Log(inventory.activeSelf);
+        if (inventory.activeSelf == false)
         {
 
+
+            Debug.Log("pressed");
+            inventory.SetActive(true);
+
+
+            inventory.GetComponent<UpdateInventory>().ApplyInventory();
+
+
+            
+        }
+
+        else 
+        {
             inventory.GetComponent<UpdateInventory>().CloseInventory();
 
             inventory.SetActive(false);
-        }
 
-        else if (inventory.activeSelf == false)
-        {
-            inventory.SetActive(true);
-            
-            
-            inventory.GetComponent<UpdateInventory>().ApplyInventory();
         }
     }
 
