@@ -7,6 +7,8 @@ using UnityEngine;
 public class SwitchPuzzle : MonoBehaviour
 {
 
+    [SerializeField]
+    GameObject swOne, swTwo, swThree, swFour, swFive;
 
     bool allDown, allUp, switchSet;
     public int firstGo = 0;
@@ -80,7 +82,11 @@ public class SwitchPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        swOne.GetComponent<OnSwitching>().ID = switchOne;
+        swTwo.GetComponent<OnSwitching>().ID = switchTwo;
+        swThree.GetComponent<OnSwitching>().ID = switchThree;
+        swFour.GetComponent<OnSwitching>().ID = switchFour;
+        swFive.GetComponent<OnSwitching>().ID = switchFive;
     }
    
 }
