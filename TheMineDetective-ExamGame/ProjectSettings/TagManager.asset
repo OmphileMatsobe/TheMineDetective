@@ -21,6 +21,7 @@ TagManager:
   - DetectImposter
   - SwitchPuzzel
   - SwitchHandle
+  - GearPuzzle
   layers:
   - Default
   - TransparentFX

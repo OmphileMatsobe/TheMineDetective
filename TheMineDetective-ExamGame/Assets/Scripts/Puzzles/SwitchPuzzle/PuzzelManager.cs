@@ -22,5 +22,10 @@ public class PuzzelManager : MonoBehaviour
         {
             //AllLightsShouldBeOff
         }
+
+        if(switchOnCount == 5)
+        {
+            Debug.Log("Puzzle Complete");
+        }
     }
 }

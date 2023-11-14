@@ -10,13 +10,19 @@ public class GearMovement : MonoBehaviour
     Circles circle;
     [SerializeField]
     GameObject circleMain;
+    [SerializeField]
+    GameObject puzzle;
+
+    GearPuzzleManager manager;
 
     Vector2 clampedPosition, spawn;
     Vector2 posDif = Vector2.zero;
 
     private void Start()
     {
+        puzzle = GameObject.FindWithTag("GearPuzzle");
         clampedPosition = spawn = transform.position;
+        manager = puzzle.GetComponent<GearPuzzleManager>();
     }
     private void OnMouseDown()
     {
@@ -38,12 +44,16 @@ public class GearMovement : MonoBehaviour
         }
         else
         {
+            manager.count++;
             transform.position = circleMain.transform.position;
         }
     }
 
     public void Update()
     {
-        transform.Rotate(new Vector3(0, 0, direction * 90 * Time.deltaTime));
+        if (manager.count == 9)
+        {
+            transform.Rotate(new Vector3(0, 0, direction * 90 * Time.deltaTime));
+        }
     }
 }
