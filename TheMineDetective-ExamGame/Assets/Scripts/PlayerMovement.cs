@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     GameManager gameManager;
     [SerializeField]
+    GameObject endPoint, startPoint;
+    [SerializeField]
     float speed;
     Vector2 move, moveOnPress;
     float ver, hor;
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         hor = Input.GetAxis("Horizontal");
 
-        moveOnPress.x += hor * Time.deltaTime * speed; 
+        moveOnPress.x = Mathf.Clamp(moveOnPress.x + (hor * Time.deltaTime * speed), startPoint.transform.position.x, endPoint.transform.position.x); 
 
         transform.position = moveOnPress;
     }
