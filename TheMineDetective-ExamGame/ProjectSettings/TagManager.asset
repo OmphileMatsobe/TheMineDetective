@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Inventory
+  - Equipment
+  - Gloves
+  - DustBox
+  - OnSwitch
+  - Switch
+  - OffSwitch
+  - SwitchHandle
+  - CameraManager
+  - Pick
+  - Helmet
+  - HintManager
+  - WireManager
+  - DetectImposter
+  - Imposter
+  - SwitchPuzzel
   layers:
   - Default
   - TransparentFX
@@ -40,4 +56,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3287878783
+    locked: 0
+  - name: props
+    uniqueID: 1822833717
+    locked: 0
+  - name: character
+    uniqueID: 2461374847
     locked: 0
