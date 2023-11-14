@@ -18,15 +18,35 @@ public class UpdateInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      for (int i = 0; i < Inventory_SO.ItemsInInventory.Count; i++)
-        {
-            Inventory_SO.ItemsInInventory[i].item = transform.GetChild(i).gameObject.GetComponent<InventoryInfo>().item.item;
-            Debug.Log(Inventory_SO.ItemsInInventory[i].item);
-        }
+      
     }
 
     private void Awake()
     {
         Inventory_SO = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<TestInventory>().inventory_SO;
+    }
+
+
+    public void ApplyInventory()
+    {
+       if (Inventory_SO.ItemsInInventory.Count > 0)
+        {
+            for (int i = 0; i < Inventory_SO.ItemsInInventory.Count; i++)
+            {
+                Transform child = transform.GetChild(i);
+                child.gameObject.SetActive(true);
+                child.gameObject.GetComponent<InventoryInfo>().Item = Inventory_SO.ItemsInInventory[i];
+            }
+        }
+    }
+
+
+    public void CloseInventory()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.gameObject.SetActive(false);
+        }
     }
 }

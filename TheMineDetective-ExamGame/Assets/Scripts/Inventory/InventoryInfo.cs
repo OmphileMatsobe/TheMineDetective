@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryInfo : MonoBehaviour
 {
     [SerializeField]
-    public Items_SO item;
+    public Items_SO Item;
 
     [SerializeField]
     private Image Image;
@@ -14,7 +14,7 @@ public class InventoryInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Image.sprite = item.image;
+        Image.sprite = Item.image;
     }
 
 

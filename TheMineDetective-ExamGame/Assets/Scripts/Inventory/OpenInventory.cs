@@ -21,12 +21,18 @@ public class OpenInventory : MonoBehaviour
     {
         if (inventory.activeSelf == true)
         {
+
+            inventory.GetComponent<UpdateInventory>().CloseInventory();
+
             inventory.SetActive(false);
         }
 
         else if (inventory.activeSelf == false)
         {
             inventory.SetActive(true);
+            
+            
+            inventory.GetComponent<UpdateInventory>().ApplyInventory();
         }
     }
 
