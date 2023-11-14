@@ -2213,10 +2213,10 @@ GameObject:
   m_Component:
   - component: {fileID: 519480265}
   - component: {fileID: 519480267}
-  - component: {fileID: 519480266}
+  - component: {fileID: 519480268}
   m_Layer: 0
   m_Name: SwitchPuzzle
-  m_TagString: Untagged
+  m_TagString: SwitchPuzzel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2243,19 +2243,6 @@ Transform:
   m_Father: {fileID: 611923241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519480266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519480264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58cdf4f74c96c749a59de6f4b9c559e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstGo: 0
 --- !u!114 &519480267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2269,6 +2256,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstGo: 0
+  switchOne: 0
+  switchTwo: 0
+  switchThree: 0
+  switchFour: 0
+  switchFive: 0
+--- !u!114 &519480268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519480264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af39f584f0dcd246987c906d0f9e90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchOnCount: 0
 --- !u!1 &534634217
 GameObject:
   m_ObjectHideFlags: 0

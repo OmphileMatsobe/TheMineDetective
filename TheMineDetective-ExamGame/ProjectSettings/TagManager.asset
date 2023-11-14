@@ -19,6 +19,8 @@ TagManager:
   - Game
   - WireManager
   - DetectImposter
+  - SwitchPuzzel
+  - SwitchHandle
   layers:
   - Default
   - TransparentFX
