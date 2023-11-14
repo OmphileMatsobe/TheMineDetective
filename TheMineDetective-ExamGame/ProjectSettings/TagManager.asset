@@ -3,25 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Switch
-  - CameraManager
-  - Pick
-  - Helmet
-  - Gloves
-  - OnSwitch
-  - OffSwitch
-  - HintManager
-  - Equipment
-  - Imposter
-  - DustBox
-  - Mine
-  - Game
-  - WireManager
-  - DetectImposter
-  - SwitchPuzzel
-  - SwitchHandle
-  - GearPuzzle
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -29,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Character
-  - Props
-  - Background
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -58,25 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1231949817
-    locked: 0
-  - name: Props
-    uniqueID: 1510380261
-    locked: 0
-  - name: Equipment
-    uniqueID: 4209579633
-    locked: 0
-  - name: UVLight
-    uniqueID: 3334759955
-    locked: 0
-  - name: Character
-    uniqueID: 1280413399
-    locked: 0
-  - name: MG
-    uniqueID: 3392709805
-    locked: 0
-  - name: Dust
-    uniqueID: 1951314195
     locked: 0

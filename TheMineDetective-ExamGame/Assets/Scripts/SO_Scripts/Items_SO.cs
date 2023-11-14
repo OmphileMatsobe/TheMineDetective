@@ -14,7 +14,7 @@ public class Items_SO :ScriptableObject
     public bool InteractableSO = true;
 
     [SerializeField]
-    public Image image;
+    public Sprite image;
 
     public enum Items
     {

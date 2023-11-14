@@ -24,38 +24,9 @@ public class Level_1_Success : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        for (int i = 0; i < RequiredItems.Count; i++)
-        {
-            Debug.Log("fok");
-            foreach (Items_SO inventory in testInventory.inventory_SO.ItemsInInventory)
-            {
-                if (inventory.item != RequiredItems[i].item)
-                {
-                    AllItems = false;
+        CheckItems();
 
-                }
-
-                else if (inventory.item == RequiredItems[i].item)
-                {
-                    checkamount += 1;
-                   
-                    if (checkamount == RequiredItems.Count)
-                    {
-                        AllItems = true;
-                        
-                        return;
-                    }
-
-                    else
-                    {
-                        AllItems = false;
-                    }
-
-                }
-            }
-
-
-        }
+        NextScene();
     }
 
 
@@ -73,8 +44,54 @@ public class Level_1_Success : MonoBehaviour, IPointerClickHandler
 
     private void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (AllItems == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log("PP");
+        }
+
+        else
+        {
+            checkamount = 0;
+        }
+       
     }
 
+   private void CheckItems()
+    {
+        for (int i = 0; i < RequiredItems.Count; i++)
+        {
+          
+            foreach (Items_SO inventory in testInventory.inventory_SO.ItemsInInventory)
+            {
+                if (inventory.item != RequiredItems[i].item)
+                {
+                    AllItems = false;
+
+                }
+
+                else if (inventory.item == RequiredItems[i].item)
+                {
+                    checkamount += 1;
+
+                    if (checkamount == RequiredItems.Count)
+                    {
+                        AllItems = true;
+
+                        return;
+                    }
+
+                    else
+                    {
+                        AllItems = false;
+                        Debug.Log("Nee");
+                    }
+
+                }
+            }
+
+
+        }
+    }
 
 }
