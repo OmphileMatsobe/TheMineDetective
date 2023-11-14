@@ -2,52 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
-public class ExchangeItems : MonoBehaviour,IPointerClickHandler
+public class Level_1_Success : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField]
-    private Items_SO ReceivedItem;
-
     [SerializeField]
     private List<Items_SO> RequiredItems;
 
+
     [SerializeField]
-    private List<Items_SO> RemoveItems;
+    private bool levelDone = false;
 
     [SerializeField]
     private TestInventory testInventory;
 
     [SerializeField]
-    private bool AllItems = false;
-
-    [SerializeField]
     private int checkamount = 0;
 
     [SerializeField]
-    private GameObject fullmug;
-
-    [SerializeField]
-    private Transform placement;
+    private bool AllItems = false;
 
     public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log(RequiredItems.Count);
-
-        CheckItems();
-
-        ItemsExchange();
-
-       
-    }
-
-
-    void Start()
-    {
-        testInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<TestInventory>();
-       
-    }
-
-    void CheckItems()
     {
         for (int i = 0; i < RequiredItems.Count; i++)
         {
@@ -63,10 +38,11 @@ public class ExchangeItems : MonoBehaviour,IPointerClickHandler
                 else if (inventory.item == RequiredItems[i].item)
                 {
                     checkamount += 1;
-                    RemoveItems.Add(RequiredItems[i]);
+                   
                     if (checkamount == RequiredItems.Count)
                     {
                         AllItems = true;
+                        
                         return;
                     }
 
@@ -82,20 +58,23 @@ public class ExchangeItems : MonoBehaviour,IPointerClickHandler
         }
     }
 
-    void ItemsExchange()
+
+    // Start is called before the first frame update
+    void Start()
     {
-        if (AllItems == true)
-        {
-
-
-            Instantiate(fullmug, placement);
-
-
-            for (int i = 0; i < RemoveItems.Count; i++)
-            {
-                testInventory.inventory_SO.ItemsInInventory.Remove(RemoveItems[i]);
-            }
-        }
+        testInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<TestInventory>();
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 
 }
