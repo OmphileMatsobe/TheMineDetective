@@ -44,7 +44,7 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
-        dialogueText.text = "A boney" + enemyUnit.unitName + " approaches.";
+        dialogueText.text = "A cruel" + enemyUnit.unitName + " approaches.";
 
         playerBanner.SetBanner(playerUnit);
         enemyBanner.SetBanner(enemyUnit);
@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (state == BattleState.LOST)
         {
-            dialogueText.text = "Samurai Down!";
+            dialogueText.text = "Detective Down!";
         }
     }
 
