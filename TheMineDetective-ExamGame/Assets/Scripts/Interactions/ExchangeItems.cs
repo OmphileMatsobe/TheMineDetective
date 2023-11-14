@@ -51,7 +51,7 @@ public class ExchangeItems : MonoBehaviour,IPointerClickHandler
     {
         for (int i = 0; i < RequiredItems.Count; i++)
         {
-            Debug.Log("fok");
+            
             foreach (Items_SO inventory in testInventory.inventory_SO.ItemsInInventory)
             {
                 if (inventory.item != RequiredItems[i].item)

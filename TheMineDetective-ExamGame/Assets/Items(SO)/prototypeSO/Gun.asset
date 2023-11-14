@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: 2
   InteractableSO: 1
+  image: {fileID: 21300000, guid: 1537e01294169a544b0d4438788c007b, type: 3}
